@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B50E69D627C7EC1F00229062 /* GuessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E69D527C7EC1F00229062 /* GuessState.swift */; };
 		B50E69D827C7EC4100229062 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E69D727C7EC4100229062 /* Models.swift */; };
-		B50E69DA27C7F07400229062 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E69D927C7F07400229062 /* LetterView.swift */; };
 		B5334A1527AC22ED00311A1F /* WurdleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5334A1427AC22ED00311A1F /* WurdleApp.swift */; };
 		B5334A1727AC22ED00311A1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5334A1627AC22ED00311A1F /* ContentView.swift */; };
 		B5334A1927AC22EE00311A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5334A1827AC22EE00311A1F /* Assets.xcassets */; };
@@ -19,7 +18,6 @@
 /* Begin PBXFileReference section */
 		B50E69D527C7EC1F00229062 /* GuessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessState.swift; sourceTree = "<group>"; };
 		B50E69D727C7EC4100229062 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		B50E69D927C7F07400229062 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
 		B5334A1127AC22ED00311A1F /* Wurdle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wurdle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5334A1427AC22ED00311A1F /* WurdleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WurdleApp.swift; sourceTree = "<group>"; };
 		B5334A1627AC22ED00311A1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				B5334A1627AC22ED00311A1F /* ContentView.swift */,
 				B50E69D527C7EC1F00229062 /* GuessState.swift */,
 				B50E69D727C7EC4100229062 /* Models.swift */,
-				B50E69D927C7F07400229062 /* LetterView.swift */,
 				B5334A1827AC22EE00311A1F /* Assets.xcassets */,
 				B5334A1A27AC22EE00311A1F /* Preview Content */,
 			);
@@ -150,7 +147,6 @@
 				B50E69D827C7EC4100229062 /* Models.swift in Sources */,
 				B5334A1727AC22ED00311A1F /* ContentView.swift in Sources */,
 				B5334A1527AC22ED00311A1F /* WurdleApp.swift in Sources */,
-				B50E69DA27C7F07400229062 /* LetterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

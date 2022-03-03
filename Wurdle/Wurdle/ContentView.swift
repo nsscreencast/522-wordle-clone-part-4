@@ -60,6 +60,60 @@ struct TextInput: View {
     }
 }
 
+struct LetterView: View {
+    var letter: LetterGuess = .blank
+    @State private var filled: Bool
+
+    init(letter: LetterGuess) {
+        self.letter = letter
+        filled = !letter.char.isWhitespace
+    }
+
+    private let scaleAmount: CGFloat = 1.2
+
+    var body: some View {
+        Color.clear
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.gray.opacity(0.3), lineWidth: 2)
+                    .opacity(filled ? 0 : 1)
+                    .animation(.none, value: filled)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(.black, lineWidth: 2)
+                    .scaleEffect(filled ? 1 : scaleAmount)
+                    .opacity(filled ? 1 : 0)
+            )
+            .aspectRatio(1, contentMode: .fit)
+            .overlay(
+                Text(String(letter.char))
+                    .font(.system(size: 100))
+                    .fontWeight(.heavy)
+                    .minimumScaleFactor(0.1)
+                    .scaleEffect(filled ? 1 : scaleAmount)
+                    .padding(2)
+            )
+            .onChange(of: letter, perform: { newLetter in
+                withAnimation {
+                    if letter.char.isWhitespace && !newLetter.char.isWhitespace {
+                        filled = true
+                    } else if !letter.char.isWhitespace && newLetter.char.isWhitespace {
+                        filled = false
+                    }
+                }
+            })
+    }
+
+    var strokeColor: Color {
+        if letter.char.isWhitespace {
+            return Color.gray.opacity(0.3)
+        } else {
+            return Color.black
+        }
+    }
+}
+
 struct LetterGrid: View {
     let width = 5
     let height = 6
